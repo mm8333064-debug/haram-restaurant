@@ -1,17 +1,9 @@
-
-import { Cairo } from "next/font/google";
+import type { Metadata } from "next";
 import "./globals.css";
 
-// استدعاء خط "كايرو" الذي يدعم اللغة العربية بشكل ممتاز
-const cairo = Cairo({ 
-  subsets: ["arabic", "latin"],
-  weight: ["300", "400", "600", "700", "900"]
-});
-
-// المعلومات الأساسية للموقع (تظهر في محركات البحث وفي عنوان المتصفح)
 export const metadata: Metadata = {
-  title: "منيو المطعم",
-  description: "قائمة الطعام الرقمية الذكية",
+  title: "منيو المطعم الرقمي",
+  description: "نظام إدارة وعرض قوائم الطعام للمطاعم",
 };
 
 export default function RootLayout({
@@ -20,9 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // تحديد اللغة والاتجاه الافتراضي للتطبيق كاملاً
     <html lang="ar" dir="rtl">
-      <body className={`${cairo.className} bg-gray-50 text-gray-900 antialiased`}>
+      <body className="bg-gray-50 text-gray-900 font-sans antialiased">
         {children}
       </body>
     </html>
