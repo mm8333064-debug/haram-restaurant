@@ -318,4 +318,4 @@ export default function RestaurantMenu() {
       )}
     </div>
   );
-}000 د.ع' },
+}
